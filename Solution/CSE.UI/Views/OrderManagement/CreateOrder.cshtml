@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Criar pedido";
+}
+
+
+@section Styles {
+    <style>
+        .container-details-section-responsive {
+            max-height: 40vh;
+            overflow-y: auto;
+        }
+
+        .container-order-itens-responsive {
+            overflow-x: auto;
+            min-width: 768px;
+        }
+
+    </style>
+}
+
+<div class="row justify-content-center mt-3">
+    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+
+        <div id="CustomerIdentificationSection" class="row mb-4">
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-7 mb-2">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon3">Cliente</span>
+                    <input id="CustomerName" class="form-control" type="text" placeholder="Insira o nome do cliente">
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-5 mb-2">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon3">N° Pedido</span>
+                    <input id="OrderNumber" class="form-control" type="text" placeholder="Insira o número do pedido">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="OrderSummarySection" class="row mb-4">
+            <div class="col-sm-3 mb-2">
+                <div class="form-floating">
+                    <input id="orderMaterialValue" class="form-control" type="number" value="0.00" readonly>
+                    <label for="orderMaterialValue">Valor do Material</label>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-2">
+                <div class="form-floating">
+                    <input id="orderProductionValue" class="form-control" type="number" value="0.00" readonly>
+                    <label for="orderProductionValue">Valor de Produção</label>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-2">
+                <div class="form-floating">
+                    <input id="orderProfitValue" class="form-control" type="number" value="0.00" readonly>
+                    <label for="orderProfitValue">Valor do Lucro</label>
+                </div>
+            </div>
+
+            <div class="col-sm-3 mb-2">
+                <div class="form-floating">
+                    <input id="orderFinalValue" class="form-control" type="number" value="0.00" readonly>
+                    <label for="orderFinalValue">Valor Final</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="OrderOperationSection" class="row mb-3">
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-2">
+                <button type="button" class="btn btn-sm btn-success w-100" onclick="addOrderItem()">
+                    <i class="bi bi-bag-plus"></i> Adicionar novo produto
+                </button>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mb-2">
+                <button type="button" class="btn btn-sm btn-secondary w-100" onclick="recycleOrder()">
+                    <i class="bi bi-recycle"></i> Reciclar pedido
+                </button>
+            </div>
+
+        </div>
+
+        <div id="OrderDetaisSection" class="row container-details-section-responsive mb-3">
+            <div class="container-order-itens-responsive">
+                <div class="row row-order-iten-responsive mb-3" data-order-item>
+
+                    <div class="col-4">
+                        <select class="form-select text-center" data-ordem-item-product>
+                            <option selected>Selecionar produto</option>
+                            <option value="1">Banho de Ervas</option>
+                            <option value="2">Banho de Ervas Premium</option>
+                            <option value="3">Frasco de Alfazema Rustico</option>
+                        </select>
+                    </div>
+
+                    <div class="col-2">
+                        <input class="form-control text-center" type="number" placeholder="Qtd."
+                            data-ordem-item-product-quantity>
+                    </div>
+
+                    <div class="col-2">
+                        <input class="form-control text-center" type="number" placeholder="00,00" readonly
+                            data-ordem-item-product-amount>
+                    </div>
+
+                    <div class="col-3">
+                        <input class="form-control text-center" type="text" placeholder="Observação"
+                            data-ordem-item-product-observation>
+                    </div>
+
+                    <div class="col-1">
+                        <button type="button" class="btn btn-danger" disabled>
+                            <i class="bi bi-trash"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/order-management.js"></script>
+}
