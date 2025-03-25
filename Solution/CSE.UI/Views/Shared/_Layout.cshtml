@@ -1,1 +1,106 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa da 7 Ervas - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/animate-css/css/animate.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/css/bootstrap-icons.min.css" asp-append-version="true">
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-dark bg-dark py-3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-2 col-lg-2 d-none d-lg-flex align-items-center justify-content-center mb-3 mb-lg-0">
+                        <a class="nav-link text-white fs-3" asp-controller="Home" asp-action="Index">
+                            <i class="bi bi-flower2"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-12 d-flex justify-content-center text-white ">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Home" asp-action="Index">
+                                    Página Inicial
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Pedidos
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="OrderManagement" asp-action="CreateOrder">
+                                            Criar novo pedido
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="OrderManagement" asp-action="Index">
+                                            Gerenciar pedidos
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 d-none d-lg-flex align-items-center justify-content-center">
+                        <ul class="nav d-flex justify-content-center list-unstyled">
+                            <li>
+                                <a class="fs-5 text-white" href="https://www.instagram.com/casada7ervas/"
+                                    target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="ms-3">
+                                <a class="fs-5 text-white" href="https://www.facebook.com/casada7ervas/"
+                                    target="_blank">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container mt-5 pb-3">
+        @RenderBody()
+    </main>
+
+    <div class="container mt-5">
+        <footer class="border-top footer text-muted">
+            <div class="container d-flex justify-content-center py-3">
+                <p class="text-center text-body-secondary">
+                    &copy; 2025 - Sistema de Gestão - Casa da 7 Ervas
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
