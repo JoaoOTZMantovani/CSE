@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.UI", "CSE.UI\CSE.UI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.API", "CSE.API\CSE.API.csproj", "{F1D98902-260D-4F7F-8F55-30643991CEBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.WorkerService", "CSE.WorkerService\CSE.WorkerService.csproj", "{CCC590AB-8D69-9C6B-F31F-D84289524A00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1D98902-260D-4F7F-8F55-30643991CEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1D98902-260D-4F7F-8F55-30643991CEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1D98902-260D-4F7F-8F55-30643991CEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC590AB-8D69-9C6B-F31F-D84289524A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC590AB-8D69-9C6B-F31F-D84289524A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC590AB-8D69-9C6B-F31F-D84289524A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC590AB-8D69-9C6B-F31F-D84289524A00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
