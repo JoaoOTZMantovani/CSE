@@ -7,12 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.UI", "CSE.UI\CSE.UI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.API", "CSE.API\CSE.API.csproj", "{F1D98902-260D-4F7F-8F55-30643991CEBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.WorkerService", "CSE.WorkerService\CSE.WorkerService.csproj", "{CCC590AB-8D69-9C6B-F31F-D84289524A00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.Infrastructure.Queue", "CSE.Infrastructure.Queue\CSE.Infrastructure.Queue.csproj", "{6743E1D6-214F-C47F-AD6B-CE736B25F32C}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		Infrastructure\docker-compose.yml = Infrastructure\docker-compose.yml
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSE.Infrastructure.Queue", "CSE.Infrastructure.Queue\CSE.Infrastructure.Queue.csproj", "{6743E1D6-214F-C47F-AD6B-CE736B25F32C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
